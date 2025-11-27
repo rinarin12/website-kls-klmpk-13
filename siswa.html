@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>🧑‍💻 Daftar Siswa XI RPL</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan animasi tabel */
+    table {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>🧑‍💻 Daftar Siswa XI RPL</header>
+
+  <nav>
+    <a href="index.html">🏠 Beranda</a>
+    <a href="profil.html">👨‍🏫 Profil</a>
+    <a href="jadwal.html">📚 Jadwal</a>
+  </nav>
+
+  <section>
+    <table id="tabelSiswa">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Lengkap</th>
+          <th>Jenis Kelamin</th>
+          <th>Jabatan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td>Aisya Hari Afika L.</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Andika Wahyu Utama</td><td>Laki-laki</td><td>Wakil Ketua</td></tr>
+        <tr><td></td><td>Anita</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Chaidarur Rohman</td><td>Laki-laki</td><td>Ketua Kelas</td></tr>
+         <tr><td></td><td>Charisa Martha Dewi</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Dinda Nur Lania D. </td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Dwi Astuti</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Elviana Jovita Andini</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Erdiva Berliana Putri</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Keany Agatha Nadzif</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Khairun Niysa</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Khoyrul Ramadhani</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Kirana Dwi Rahmayani</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Kusnul Khotimah</td><td>Perempuan</td><td>Bendahara 2</td></tr>
+        <tr><td></td><td>Lila Nur Latifah</td><td>Perempuan</td><td>Sekertaris 2</td></tr>
+        <tr><td></td><td>Lukman Ardiansyah R.</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Machfud Khasan</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Maratus Sholihah</td><td>Perempuan</td><td>Kebersihan</td></tr>
+        <tr><td></td><td>Marsya Niswa A.</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Moh. Rafael Riski A.</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Novita Anggraeni</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Nur Khasan</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Nur Kholifa</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Renatha Putri</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Rifa Arinal Haq</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Ririn Ida Aulia</td><td>Perempuan</td><td>Sekertaris 1</td></tr>
+        <tr><td></td><td>Risma Vinustika</td><td>Perempuan</td><td>Bendahara 1</td></tr>
+        <tr><td></td><td>Sasmita Adinda Putri</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Shafa Atika Zahra</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Sholekha</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Silvia Nur Rohma</td><td>Perempuan</td><td>Anggota</td></tr>
+        <tr><td></td><td>Supriadi</td><td>Laki-laki</td><td>Anggota</td></tr>
+        <tr><td></td><td>Tiara Celciliya Putri</td><td>Perempuan</td><td>Ketertiban</td></tr>
+        <tr><td></td><td>Wahidatul Muharom</td><td>Perempuan</td><td>Anggota</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>© 2025 XI RPL | "Coding with Heart, Creating with Mind" 💖</footer>
+
+  <script>
+    // Menambahkan nomor otomatis di kolom pertama
+    const rows = document.querySelectorAll("#tabelSiswa tbody tr");
+    rows.forEach((row, index) => row.cells[0].textContent = index + 1);
+  </script>
+</body>
+</html>
