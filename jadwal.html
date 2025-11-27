@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 Jadwal XI RPL</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan khusus untuk galeri guru */
+    .galeri {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .galeri h2 {
+      color: #ff6699;
+      margin-bottom: 20px;
+    }
+
+    .grid-guru {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-top: 10px;
+    }
+
+    .guru {
+      background: #fff0f5;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .guru:hover {
+      transform: scale(1.05);
+    }
+
+    .guru img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffb6c1;
+    }
+
+    .guru p {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #a83259;
+    }
+
+    .guru span {
+      display: block;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>📚 Jadwal Kelas XI RPL</header>
+
+  <nav>
+    <a href="index.html">🏠 Beranda</a>
+    <a href="siswa.html">🧑‍💻 Siswa</a>
+    <a href="profil.html">👨‍🏫 Profil</a>
+  </nav>
+
+  <section>
+    <table border="1">
+      <tr>
+        <th>Hari</th>
+        <th>Mata Pelajaran</th>
+        <th>Guru Pengampu</th>
+      </tr>
+
+      <tr><td rowspan="6">Senin</td><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
+      <tr><td>PJOK</td><td>Pak Nurdin</td></tr>
+      <tr><td>Sejarah</td><td>Bu Yuli</td></tr>
+      <tr><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+      <tr><td>Bimbingan Konseling (BK)</td><td>Bu Yulia</td></tr>
+      <tr><td>PPKN</td><td>Bu Etty</td></tr>
+
+      <tr><td rowspan="4">Selasa</td><td>B7 - RPL</td><td>Bu Yuni</td></tr>
+      <tr><td>PAI</td><td>Pak Diin</td></tr>
+      <tr><td>Matematika</td><td>Bu Tata</td></tr>
+      <tr><td>Bahasa Indonesia</td><td>Bu Mira</td></tr>
+
+      <tr><td rowspan="4">Rabu</td><td>Bahasa Jawa</td><td>Bu Tika</td></tr>
+      <tr><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
+      <tr><td>B8A - RPL</td><td>Pak Arno</td></tr>
+      <tr><td>B7 - RPL</td><td>Bu Yuni</td></tr>
+
+      <tr><td rowspan="2">Kamis</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+      <tr><td>B6 - RPL</td><td>Pak Nuril</td></tr>
+
+      <tr><td rowspan="2">Jumat</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+      <tr><td>B6 - RPL</td><td>Pak Arno</td></tr>
+    </table>
+  </section>
+
+  <!-- 🧑‍🏫 Galeri Guru -->
+  <section class="galeri">
+    <h2>🧑‍🏫 Galeri Guru XI RPL</h2>
+    <div class="grid-guru">
+      <div class="guru">
+        <img src="mis fada.jpeg" alt="Miss Fada">
+        <p>Miss Fada</p>
+        <span>Bahasa Inggris</span>
+      </div>
+      <div class="guru">
+        <img src="pak noordin.JPEG" alt="Pak Nurdin">
+        <p>Pak Nurdin</p>
+        <span>PJOK</span>
+      </div>
+      <div class="guru">
+        <img src="bu yuli.JPEG" alt="Bu Yuli">
+        <p>Bu Yuli</p>
+        <span>Sejarah</span>
+      </div>
+      <div class="guru">
+        <img src="bu intan.JPEG" alt="Bu Intan">
+        <p>Bu Intan</p>
+        <span>RPL</span>
+      </div>
+      <div class="guru">
+        <img src="bu ika.JPEG" alt="Bu Ika">
+        <p>Bu Ika</p>
+        <span>RPL</span>
+      </div>
+      <div class="guru">
+        <img src="bu yulia.JPEG" alt="Bu Yulia">
+        <p>Bu Yulia</p>
+        <span>Bimbingan Konseling</span>
+      </div>
+      <div class="guru">
+        <img src="bu etty.JPEG" alt="Bu Etty">
+        <p>Bu Etty</p>
+        <span>PPKN</span>
+      </div>
+      <div class="guru">
+        <img src="bu yuni.JPEG" alt="Bu Yuni">
+        <p>Bu Yuni</p>
+        <span>B7 - RPL</span>
+      </div>
+      <div class="guru">
+        <img src="pak diin.JPEG" alt="Pak Diin">
+        <p>Pak Diin</p>
+        <span>PAI</span>
+      </div>
+      <div class="guru">
+        <img src="bu tata.JPEG" alt="Bu Tata">
+        <p>Bu Tata</p>
+        <span>Matematika</span>
+      </div>
+      <div class="guru">
+        <img src="bu mira.JPEG" alt="Bu Mira">
+        <p>Bu Mira</p>
+        <span>Bahasa Indonesia</span>
+      </div>
+      <div class="guru">
+        <img src="bu tika.JPEG" alt="Bu Tika">
+        <p>Bu Tika</p>
+        <span>Bahasa Jawa</span>
+      </div>
+      <div class="guru">
+        <img src="pak arno.JPEG" alt="Pak Arno">
+        <p>Pak Arno</p>
+        <span>RPL</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 XI RPL | Galeri Guru</footer>
+</body>
+</html>
