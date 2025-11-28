@@ -376,60 +376,85 @@ table.siswa tbody tr:hover {
 }
 
 /* ==========================================
-   💗 PROFIL KELAS XI RPL (WARNA DISESUAIKAN)
+   💗 PROFIL KELAS + STRUKTUR KELAS (BARU)
 ========================================== */
-.profil-container {
+
+/* Box Profil */
+.profil-box {
   width: 85%;
-  margin: 30px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(208, 107, 255, 0.15);
+  margin: 25px auto;
+  background: #fff0f7;
+  padding: 25px 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(208, 107, 255, 0.18);
+  color: #4a2b5c;
+  font-size: 16px;
+  line-height: 1.7;
+  border: 2px solid rgba(208, 107, 255, 0.25);
 }
 
-.profil-container h2 {
-  font-size: 28px;
+/* Struktur Kelas */
+.struktur {
+  width: 90%;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(208, 107, 255, 0.18);
+}
+
+/* Judul tabel struktur */
+.judul-struktur {
+  font-size: 26px;
+  padding: 15px 0;
+  text-align: center;
   font-weight: 700;
   background: linear-gradient(90deg, #d06bff, #ff8adf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
 }
 
-.profil-text {
-  background: #fff0f7;
-  padding: 20px;
+/* Tabel Struktur */
+.struktur table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 4px 18px rgba(208, 107, 255, 0.1);
-  font-size: 16px;
-  line-height: 1.7;
+  box-shadow: 0 5px 18px rgba(208, 107, 255, 0.15);
+}
+
+.struktur th {
+  padding: 14px;
+  background: linear-gradient(90deg, #d06bff, #ff8adf);
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.struktur td {
+  padding: 12px 14px;
+  background: #ffe6f9;
   color: #4a2b5c;
+  font-weight: 500;
 }
 
-.profil-text b {
-  color: #b14cff;
+.struktur tr:nth-child(even) td {
+  background: #fff0f7;
 }
 
-.profil-text p {
-  margin: 8px 0;
+.struktur tr:hover td {
+  background: #f6d5ff;
+  transition: 0.3s ease;
+  transform: scale(1.01);
 }
 
-/* Ikon Judul */
-.profil-icon {
-  color: #d06bff;
-  font-size: 30px;
-  margin-right: 8px;
-}
-
-/* Responsive Profil */
+/* Responsive Struktur */
 @media (max-width: 600px) {
-  .profil-container {
-    width: 95%;
-    padding: 20px;
-  }
-  .profil-text {
+  .struktur table {
     font-size: 14px;
-    padding: 15px;
+  }
+  .struktur td, .struktur th {
+    padding: 10px;
   }
 }
