@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>📚 Jadwal XI RPL</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     /* Tambahan khusus untuk galeri guru */
     .galeri {
       margin-top: 30px;
       text-align: center;
     }
-
     .galeri h2 {
       color: #ff6699;
       margin-bottom: 20px;
     }
-
     .grid-guru {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -23,7 +21,6 @@
       justify-items: center;
       margin-top: 10px;
     }
-
     .guru {
       background: #fff0f5;
       padding: 10px;
@@ -31,11 +28,9 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
-
     .guru:hover {
       transform: scale(1.05);
     }
-
     .guru img {
       width: 120px;
       height: 120px;
@@ -43,17 +38,65 @@
       border-radius: 50%;
       border: 3px solid #ffb6c1;
     }
-
     .guru p {
       margin-top: 8px;
       font-weight: bold;
       color: #a83259;
     }
-
     .guru span {
       display: block;
       font-size: 13px;
       color: #555;
+    }
+
+    /* Styling Jadwal */
+    table.jadwal {
+      width: 90%;
+      margin: 30px auto 40px auto;
+      border-collapse: collapse;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 8px 25px rgba(208, 107, 255, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+    table.jadwal thead tr {
+      background: linear-gradient(90deg, #d06bff, #ff8adf);
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    table.jadwal th, table.jadwal td {
+      padding: 12px 18px;
+      border: 1px solid #e0c7f9;
+      text-align: center;
+      font-weight: 500;
+      color: #4a2b5c;
+    }
+    table.jadwal tbody tr:hover {
+      background: #ffe6ff;
+      cursor: default;
+      transition: background 0.3s ease;
+    }
+    table.jadwal tbody tr:nth-child(odd) {
+      background: #f9e6ff;
+    }
+    table.jadwal tbody tr:nth-child(even) {
+      background: #fce4ff;
+    }
+    table.jadwal tbody td:first-child {
+      font-weight: 700;
+      vertical-align: middle;
+      color: #a83259;
+    }
+    @media (max-width: 600px) {
+      table.jadwal {
+        width: 100%;
+        font-size: 14px;
+      }
+      table.jadwal th, table.jadwal td {
+        padding: 8px 12px;
+      }
     }
   </style>
 </head>
@@ -68,35 +111,38 @@
   </nav>
 
   <section>
-    <table border="1">
-      <tr>
-        <th>Hari</th>
-        <th>Mata Pelajaran</th>
-        <th>Guru Pengampu</th>
-      </tr>
+    <table class="jadwal">
+      <thead>
+        <tr>
+          <th>Hari</th>
+          <th>Mata Pelajaran</th>
+          <th>Guru Pengampu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="6">Senin</td><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
+        <tr><td>PJOK</td><td>Pak Nurdin</td></tr>
+        <tr><td>Sejarah</td><td>Bu Yuli</td></tr>
+        <tr><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+        <tr><td>Bimbingan Konseling (BK)</td><td>Bu Yulia</td></tr>
+        <tr><td>PPKN</td><td>Bu Etty</td></tr>
 
-      <tr><td rowspan="6">Senin</td><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
-      <tr><td>PJOK</td><td>Pak Nurdin</td></tr>
-      <tr><td>Sejarah</td><td>Bu Yuli</td></tr>
-      <tr><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
-      <tr><td>Bimbingan Konseling (BK)</td><td>Bu Yulia</td></tr>
-      <tr><td>PPKN</td><td>Bu Etty</td></tr>
+        <tr><td rowspan="4">Selasa</td><td>B7 - RPL</td><td>Bu Yuni</td></tr>
+        <tr><td>PAI</td><td>Pak Diin</td></tr>
+        <tr><td>Matematika</td><td>Bu Tata</td></tr>
+        <tr><td>Bahasa Indonesia</td><td>Bu Mira</td></tr>
 
-      <tr><td rowspan="4">Selasa</td><td>B7 - RPL</td><td>Bu Yuni</td></tr>
-      <tr><td>PAI</td><td>Pak Diin</td></tr>
-      <tr><td>Matematika</td><td>Bu Tata</td></tr>
-      <tr><td>Bahasa Indonesia</td><td>Bu Mira</td></tr>
+        <tr><td rowspan="4">Rabu</td><td>Bahasa Jawa</td><td>Bu Tika</td></tr>
+        <tr><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
+        <tr><td>B8A - RPL</td><td>Pak Arno</td></tr>
+        <tr><td>B7 - RPL</td><td>Bu Yuni</td></tr>
 
-      <tr><td rowspan="4">Rabu</td><td>Bahasa Jawa</td><td>Bu Tika</td></tr>
-      <tr><td>Bahasa Inggris</td><td>Miss Fada</td></tr>
-      <tr><td>B8A - RPL</td><td>Pak Arno</td></tr>
-      <tr><td>B7 - RPL</td><td>Bu Yuni</td></tr>
+        <tr><td rowspan="2">Kamis</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+        <tr><td>B6 - RPL</td><td>Pak Nuril</td></tr>
 
-      <tr><td rowspan="2">Kamis</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
-      <tr><td>B6 - RPL</td><td>Pak Nuril</td></tr>
-
-      <tr><td rowspan="2">Jumat</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
-      <tr><td>B6 - RPL</td><td>Pak Arno</td></tr>
+        <tr><td rowspan="2">Jumat</td><td>B6 - RPL</td><td>Bu Intan / Bu Ika</td></tr>
+        <tr><td>B6 - RPL</td><td>Pak Arno</td></tr>
+      </tbody>
     </table>
   </section>
 
@@ -105,72 +151,72 @@
     <h2>🧑‍🏫 Galeri Guru XI RPL</h2>
     <div class="grid-guru">
       <div class="guru">
-        <img src="paknuril.jpeg" alt="Miss Fada">
+        <img src="paknuril.jpeg" alt="Pak Nuril" />
         <p>Pak Nuril</p>
         <span>RPL</span>
       </div>
       <div class="guru">
-        <img src="misfada.jpeg" alt="Miss Fada">
+        <img src="misfada.jpeg" alt="Miss Fada" />
         <p>Miss Fada</p>
         <span>Bahasa Inggris</span>
       </div>
       <div class="guru">
-        <img src="paknurdin.jpeg" alt="Pak Nurdin">
+        <img src="paknurdin.jpeg" alt="Pak Nurdin" />
         <p>Pak Nurdin</p>
         <span>PJOK</span>
       </div>
       <div class="guru">
-        <img src="buyuli.jpeg" alt="Bu Yuli">
+        <img src="buyuli.jpeg" alt="Bu Yuli" />
         <p>Bu Yuli</p>
         <span>Sejarah</span>
       </div>
       <div class="guru">
-        <img src="buintan.jpeg" alt="Bu Intan">
+        <img src="buintan.jpeg" alt="Bu Intan" />
         <p>Bu Intan</p>
         <span>RPL</span>
       </div>
       <div class="guru">
-        <img src="buika.jpeg" alt="Bu Ika">
+        <img src="buika.jpeg" alt="Bu Ika" />
         <p>Bu Ika</p>
         <span>RPL</span>
       </div>
       <div class="guru">
-        <img src="buyulia.jpeg" alt="Bu Yulia">
+        <img src="buyulia.jpeg" alt="Bu Yulia" />
         <p>Bu Yulia</p>
         <span>Bimbingan Konseling</span>
       </div>
       <div class="guru">
-        <img src="buetyy.jpeg" alt="Bu Etyy">
+        <img src="buetyy.jpeg" alt="Bu Etyy" />
         <p>Bu Etyy</p>
         <span>PPKN</span>
       </div>
       <div class="guru">
-        <img src="buyuni.jpeg" alt="Bu Yuni">
+        <img src="buyuni.jpeg" alt="Bu Yuni" />
         <p>Bu Yuni</p>
         <span>B7 - RPL</span>
       </div>
       <div class="guru">
-        <img src="pakdiin.jpeg" alt="Pak Diin">
+        <img src="pakdiin.jpeg" alt="Pak Diin" />
         <p>Pak Diin</p>
         <span>PAI</span>
       </div>
       <div class="guru">
-        <img src="butata.jpeg" alt="Bu Tata">
+        <img src="butata.jpeg" alt="Bu Tata" />
         <p>Bu Tata</p>
         <span>Matematika</span>
       </div>
       <div class="guru">
-        <img src="bumira.jpeg" alt="Bu Mira">
+        <img src="bumira.jpeg" alt="Bu Mira" />
         <p>Bu Mira</p>
         <span>Bahasa Indonesia</span>
       </div>
       <div class="guru">
-        <img src="butika.jpeg" alt="Bu Tika">
+        <img src="butika.jpeg" alt="Bu Tika" />
         <p>Bu Tika</p>
         <span>Bahasa Jawa</span>
       </div>
       <div class="guru">
-        <img src="pakarno.jpeg" alt="Pak Arno">
+        <img src="pakarno.jpeg" alt="Pak Arno" />
         <p>Pak Arno</p>
         <span>RPL</span>
       </div>
