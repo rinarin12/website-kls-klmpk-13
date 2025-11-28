@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri Sekolah</title>
 
-    <!-- File CSS kamu -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,110 +16,120 @@
     ============================ -->
     <div class="filter-buttons">
         <button class="filter-btn" data-filter="all">Semua</button>
+
         <button class="filter-btn" data-filter="pentas">Pentas Seni</button>
         <button class="filter-btn" data-filter="kartini">Hari Kartini</button>
         <button class="filter-btn" data-filter="industri">Kunjungan Industri</button>
+
+        <button class="filter-btn" data-filter="guru">Hari Guru</button>
+        <button class="filter-btn" data-filter="pahlawan">Hari Pahlawan</button>
+        <button class="filter-btn" data-filter="istigosah">Istigosah</button>
+        <button class="filter-btn" data-filter="bazaar">Bazaar</button>
+        <button class="filter-btn" data-filter="p5">Pentas P5</button>
+
         <button class="filter-btn" data-filter="lain">Lainnya</button>
     </div>
 
     <!-- ===========================
          GALERI
     ============================ -->
-    <div class="gallery">
-
-        <!-- Pentas Seni -->
+    <div id="gallery-container" class="gallery">
+        
+        <!-- Contoh item (judul + foto) -->
+        <!-- Tambahkan class sesuai kategorinya -->
         <div class="item pentas hover-animate">
-            <img src="img/pentas1.jpg" alt="Pentas Seni 1">
+            <img src="img/pentas1.jpg" alt="">
+            <p class="caption">Pentas Seni Tari Tradisional</p>
         </div>
 
-        <div class="item pentas hover-animate">
-            <img src="img/pentas2.jpg" alt="Pentas Seni 2">
+        <div class="item guru hover-animate">
+            <img src="img/hari_guru1.jpg" alt="">
+            <p class="caption">Peringatan Hari Guru Nasional</p>
         </div>
 
-        <div class="item pentas hover-animate">
-            <img src="img/pentas3.jpg" alt="Pentas Seni 3">
+        <div class="item pahlawan hover-animate">
+            <img src="img/pahlawan1.jpg" alt="">
+            <p class="caption">Upacara Hari Pahlawan</p>
         </div>
 
-        <!-- Hari Kartini -->
+        <div class="item bazaar hover-animate">
+            <img src="img/bazaar1.jpg" alt="">
+            <p class="caption">Bazar Karya Siswa</p>
+        </div>
+
+        <div class="item p5 hover-animate">
+            <img src="img/p5_1.jpg" alt="">
+            <p class="caption">Pentas P5 - Kreasi Siswa</p>
+        </div>
+
+        <div class="item istigosah hover-animate">
+            <img src="img/istigosah1.jpg" alt="">
+            <p class="caption">Kegiatan Istigosah Kelas</p>
+        </div>
+
         <div class="item kartini hover-animate">
-            <img src="img/kartini1.jpg" alt="Hari Kartini 1">
-        </div>
-
-        <div class="item kartini hover-animate">
-            <img src="img/kartini2.jpg" alt="Hari Kartini 2">
-        </div>
-
-        <div class="item kartini hover-animate">
-            <img src="img/kartini3.jpg" alt="Hari Kartini 3">
-        </div>
-
-        <!-- Kunjungan Industri -->
-        <div class="item industri hover-animate">
-            <img src="img/ki1.jpg" alt="Kunjungan Industri 1">
+            <img src="img/kartini1.jpg" alt="">
+            <p class="caption">Lomba Busana Kartini</p>
         </div>
 
         <div class="item industri hover-animate">
-            <img src="img/ki2.jpg" alt="Kunjungan Industri 2">
-        </div>
-
-        <div class="item industri hover-animate">
-            <img src="img/ki3.jpg" alt="Kunjungan Industri 3">
-        </div>
-
-        <!-- Lain-lain -->
-        <div class="item lain hover-animate">
-            <img src="img/other1.jpg" alt="Kegiatan Lain">
+            <img src="img/ki1.jpg" alt="">
+            <p class="caption">Kunjungan Industri Ke Pabrik</p>
         </div>
 
         <div class="item lain hover-animate">
-            <img src="img/other2.jpg" alt="Kegiatan Lain">
+            <img src="img/other1.jpg" alt="">
+            <p class="caption">Kegiatan Lain</p>
         </div>
 
-        <div class="item lain hover-animate">
-            <img src="img/other3.jpg" alt="Kegiatan Lain">
-        </div>
-
+        <!-- Tambah semua itemmu di sini -->
     </div>
+
+    <!-- ===========================
+         PAGINATION
+    ============================ -->
+    <div id="pagination" class="pagination"></div>
 
     <!-- ===========================
          LIGHTBOX
     ============================ -->
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="">
+        <img id="lightbox-img" src="">
     </div>
-
 
     <!-- ===========================
          JAVASCRIPT
     ============================ -->
     <script>
-        // ------------------------
-        // FILTER BUTTON
-        // ------------------------
+
+        /* ======================
+           FILTER BUTTON
+        ======================= */
         const filterButtons = document.querySelectorAll(".filter-btn");
-        const galleryItems = document.querySelectorAll(".item");
+        const items = document.querySelectorAll(".item");
 
         filterButtons.forEach(btn => {
             btn.addEventListener("click", () => {
-                const category = btn.getAttribute("data-filter");
+                const filter = btn.getAttribute("data-filter");
 
-                galleryItems.forEach(item => {
-                    if (category === "all" || item.classList.contains(category)) {
+                items.forEach(item => {
+                    if (filter === "all" || item.classList.contains(filter)) {
                         item.style.display = "block";
                     } else {
                         item.style.display = "none";
                     }
                 });
+
+                generatePagination(); 
             });
         });
 
-        // ------------------------
-        // LIGHTBOX
-        // ------------------------
+        /* ======================
+           LIGHTBOX
+        ======================= */
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
-        const closeLightbox = document.querySelector(".close-lightbox");
 
         document.querySelectorAll(".gallery img").forEach(img => {
             img.addEventListener("click", () => {
@@ -129,15 +138,57 @@
             });
         });
 
-        closeLightbox.addEventListener("click", () => {
+        document.querySelector(".close-lightbox").onclick = () => {
             lightbox.style.display = "none";
-        });
+        };
 
-        lightbox.addEventListener("click", (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = "none";
+        lightbox.onclick = e => {
+            if (e.target === lightbox) lightbox.style.display = "none";
+        };
+
+        /* ======================
+           PAGINATION
+        ======================= */
+
+        const itemsPerPage = 9;
+        let currentPage = 1;
+
+        function generatePagination() {
+            let visibleItems = [...items].filter(i => i.style.display !== "none");
+            let totalPages = Math.ceil(visibleItems.length / itemsPerPage);
+
+            let paginationDiv = document.getElementById("pagination");
+            paginationDiv.innerHTML = "";
+
+            for (let i = 1; i <= totalPages; i++) {
+                let btn = document.createElement("button");
+                btn.innerText = i;
+                btn.className = "page-btn";
+                if (i === currentPage) btn.classList.add("active-page");
+
+                btn.addEventListener("click", () => {
+                    currentPage = i;
+                    showPage();
+                    generatePagination();
+                });
+
+                paginationDiv.appendChild(btn);
             }
-        });
+            showPage();
+        }
+
+        function showPage() {
+            let visibleItems = [...items].filter(i => i.style.display !== "none");
+            visibleItems.forEach(i => i.style.display = "none");
+
+            let start = (currentPage - 1) * itemsPerPage;
+            let end = start + itemsPerPage;
+
+            visibleItems.slice(start, end).forEach(i => i.style.display = "block");
+        }
+
+        generatePagination();  // load awal
+
     </script>
 
 </body>
