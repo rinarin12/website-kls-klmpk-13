@@ -93,7 +93,9 @@ h2 {
   box-shadow: 0 0 25px rgba(208, 107, 255, 0.5);
 }
 
-/* Tombol Filter */
+/* =============================
+   🌸 GALERI - FILTER BUTTON
+============================= */
 .filter-buttons {
   text-align: center;
   margin: 20px 0 35px;
@@ -118,7 +120,9 @@ h2 {
   box-shadow: 0 0 18px rgba(208, 107, 255, 0.55);
 }
 
-/* Grid Galeri */
+/* =============================
+   🌸 GRID GALERI
+============================= */
 .gallery {
   width: 90%;
   margin: auto;
@@ -134,14 +138,14 @@ h2 {
   background: white;
   box-shadow: 0 4px 18px rgba(208, 107, 255, 0.25);
   border: 3px solid rgba(208, 107, 255, 0.15);
-  transition: 0.3s ease;
+  transition: 0.4s ease;
   cursor: pointer;
 }
 
-/* Animasi Hover */
+/* Animasi Hover Lembut */
 .hover-animate:hover {
   transform: scale(1.06);
-  box-shadow: 0 8px 28px rgba(208, 107, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(208, 107, 255, 0.4);
 }
 
 .item img {
@@ -151,7 +155,51 @@ h2 {
   border-radius: 18px;
 }
 
-/* Lightbox */
+/* Caption Judul Foto */
+.caption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8a3ab9;
+  opacity: 0.9;
+}
+
+/* =============================
+   ✨ PAGINATION
+============================= */
+.pagination {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.page-btn {
+  padding: 8px 14px;
+  margin: 0 4px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f8d8ff;
+  color: #8a3ab9;
+  transition: 0.3s ease;
+}
+
+.page-btn:hover {
+  background: #d06bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.active-page {
+  background: #d06bff;
+  color: white;
+  box-shadow: 0 0 15px rgba(208, 107, 255, 0.6);
+}
+
+/* =============================
+   ✨ LIGHTBOX
+============================= */
 .lightbox {
   display: none;
   position: fixed;
@@ -159,7 +207,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(50, 0, 70, 0.7);
+  background: rgba(40, 0, 60, 0.7);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -173,7 +221,6 @@ h2 {
   animation: zoomIn 0.3s ease;
 }
 
-/* Tombol Close */
 .close-lightbox {
   position: absolute;
   top: 25px;
@@ -191,7 +238,6 @@ h2 {
   color: #ffb4ff;
 }
 
-/* Animasi Lightbox */
 @keyframes zoomIn {
   from { transform: scale(0.5); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
