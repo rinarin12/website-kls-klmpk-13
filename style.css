@@ -122,6 +122,7 @@ h2 {
   border-spacing: 0;
   border-radius: 15px;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .jadwal th, .jadwal td {
@@ -152,6 +153,7 @@ h2 {
   box-shadow: 0 3px 15px rgba(208, 107, 255, 0.2);
 }
 
+/* Animasi masuk */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -224,6 +226,7 @@ h2 {
   font-size: 14px;
   font-weight: 600;
   color: #8a3ab9;
+  opacity: 0.9;
 }
 
 /* =============================
@@ -238,6 +241,7 @@ h2 {
   padding: 8px 14px;
   margin: 0 4px;
   border-radius: 10px;
+  border: none;
   font-weight: bold;
   cursor: pointer;
   background: #f8d8ff;
@@ -312,11 +316,12 @@ footer {
   color: #fff;
   font-size: 14px;
   font-style: italic;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0 -3px 15px rgba(208, 107, 255, 0.3);
 }
 
 /* ==============================
-   📋 Tabel Siswa
+   📋 Styling Tabel Siswa
 ============================== */
 table.siswa {
   width: 90%;
@@ -325,9 +330,10 @@ table.siswa {
   border-spacing: 0;
   border-radius: 15px;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 25px rgba(208, 107, 255, 0.15);
   background: white;
   text-align: left;
-  box-shadow: 0 8px 25px rgba(208, 107, 255, 0.15);
 }
 
 table.siswa thead tr {
@@ -340,20 +346,38 @@ table.siswa thead tr {
 table.siswa th, table.siswa td {
   padding: 12px 18px;
   border-bottom: 1px solid #e0c7f9;
+  font-weight: 500;
   color: #4a2b5c;
 }
 
-table.siswa tbody tr:nth-child(odd) { background: #fce4ff; }
-table.siswa tbody tr:nth-child(even) { background: #fff0f5; }
+table.siswa tbody tr:nth-child(odd) {
+  background: #fce4ff;
+}
+
+table.siswa tbody tr:nth-child(even) {
+  background: #fff0f5;
+}
 
 table.siswa tbody tr:hover {
   background: #f7d6ff;
-  transition: 0.3s ease;
+  cursor: default;
+  transition: background 0.3s ease;
 }
 
-/* ==============================
-   💗 PROFIL (DITAMBAHKAN)
-============================== */
+/* Responsive */
+@media (max-width: 600px) {
+  table.siswa {
+    width: 100%;
+    font-size: 14px;
+  }
+  table.siswa th, table.siswa td {
+    padding: 8px 12px;
+  }
+}
+
+/* ==========================================
+   💗 PROFIL KELAS XI RPL (WARNA DISESUAIKAN)
+========================================== */
 .profil-container {
   width: 85%;
   margin: 30px auto;
@@ -387,16 +411,25 @@ table.siswa tbody tr:hover {
   color: #b14cff;
 }
 
-.profil-text p { margin: 8px 0; }
+.profil-text p {
+  margin: 8px 0;
+}
 
+/* Ikon Judul */
 .profil-icon {
   color: #d06bff;
   font-size: 30px;
   margin-right: 8px;
 }
 
-/* Responsive */
+/* Responsive Profil */
 @media (max-width: 600px) {
-  .profil-container { width: 95%; padding: 20px; }
-  .profil-text { font-size: 14px; padding: 15px; }
+  .profil-container {
+    width: 95%;
+    padding: 20px;
+  }
+  .profil-text {
+    font-size: 14px;
+    padding: 15px;
+  }
 }
