@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Sekolah</title>
+
+    <!-- File CSS kamu -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Galeri Kegiatan Sekolah</h1>
+
+    <!-- ===========================
+         TOMBOL FILTER
+    ============================ -->
+    <div class="filter-buttons">
+        <button class="filter-btn" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="pentas">Pentas Seni</button>
+        <button class="filter-btn" data-filter="kartini">Hari Kartini</button>
+        <button class="filter-btn" data-filter="industri">Kunjungan Industri</button>
+        <button class="filter-btn" data-filter="lain">Lainnya</button>
+    </div>
+
+    <!-- ===========================
+         GALERI
+    ============================ -->
+    <div class="gallery">
+
+        <!-- Pentas Seni -->
+        <div class="item pentas hover-animate">
+            <img src="img/pentas1.jpg" alt="Pentas Seni 1">
+        </div>
+
+        <div class="item pentas hover-animate">
+            <img src="img/pentas2.jpg" alt="Pentas Seni 2">
+        </div>
+
+        <div class="item pentas hover-animate">
+            <img src="img/pentas3.jpg" alt="Pentas Seni 3">
+        </div>
+
+        <!-- Hari Kartini -->
+        <div class="item kartini hover-animate">
+            <img src="img/kartini1.jpg" alt="Hari Kartini 1">
+        </div>
+
+        <div class="item kartini hover-animate">
+            <img src="img/kartini2.jpg" alt="Hari Kartini 2">
+        </div>
+
+        <div class="item kartini hover-animate">
+            <img src="img/kartini3.jpg" alt="Hari Kartini 3">
+        </div>
+
+        <!-- Kunjungan Industri -->
+        <div class="item industri hover-animate">
+            <img src="img/ki1.jpg" alt="Kunjungan Industri 1">
+        </div>
+
+        <div class="item industri hover-animate">
+            <img src="img/ki2.jpg" alt="Kunjungan Industri 2">
+        </div>
+
+        <div class="item industri hover-animate">
+            <img src="img/ki3.jpg" alt="Kunjungan Industri 3">
+        </div>
+
+        <!-- Lain-lain -->
+        <div class="item lain hover-animate">
+            <img src="img/other1.jpg" alt="Kegiatan Lain">
+        </div>
+
+        <div class="item lain hover-animate">
+            <img src="img/other2.jpg" alt="Kegiatan Lain">
+        </div>
+
+        <div class="item lain hover-animate">
+            <img src="img/other3.jpg" alt="Kegiatan Lain">
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         LIGHTBOX
+    ============================ -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+
+    <!-- ===========================
+         JAVASCRIPT
+    ============================ -->
+    <script>
+        // ------------------------
+        // FILTER BUTTON
+        // ------------------------
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const galleryItems = document.querySelectorAll(".item");
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const category = btn.getAttribute("data-filter");
+
+                galleryItems.forEach(item => {
+                    if (category === "all" || item.classList.contains(category)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        // ------------------------
+        // LIGHTBOX
+        // ------------------------
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeLightbox = document.querySelector(".close-lightbox");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
