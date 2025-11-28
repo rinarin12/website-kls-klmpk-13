@@ -243,6 +243,110 @@ h2 {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* =============================
+   📚 TABEL JADWAL MENARIK
+============================= */
+.jadwal-container {
+  width: 85%;
+  margin: 25px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(208, 107, 255, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+.jadwal-container h2 {
+  margin-bottom: 15px;
+}
+
+table.jadwal {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.jadwal th {
+  background: linear-gradient(90deg, #d06bff, #ff8adf);
+  color: white;
+  padding: 14px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.jadwal td {
+  padding: 12px;
+  text-align: center;
+  background: #ffeaff;
+  border-bottom: 2px solid #f4c9ff;
+  color: #5f3e7a;
+  font-weight: 500;
+}
+
+.jadwal tr:nth-child(even) td {
+  background: #fff5ff;
+}
+
+.jadwal tr:hover td {
+  background: #f4d2ff;
+  transition: 0.3s;
+}
+
+/* =============================
+   🧑‍💻 KARTU SISWA CANTIK
+============================= */
+.siswa-grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.card-siswa {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(208, 107, 255, 0.25);
+  border: 2px solid rgba(200, 120, 255, 0.2);
+  transition: 0.35s ease;
+}
+
+.card-siswa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(208, 107, 255, 0.4);
+}
+
+.card-siswa img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f8d8ff;
+  box-shadow: 0 4px 12px rgba(208, 107, 255, 0.3);
+  margin-bottom: 15px;
+}
+
+.card-siswa h3 {
+  font-size: 18px;
+  color: #8a3ab9;
+}
+
+.card-siswa p {
+  font-size: 14px;
+  opacity: 0.75;
+  margin-top: -5px;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* 💗 Footer */
 footer {
   text-align: center;
