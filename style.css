@@ -329,3 +329,58 @@ footer {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0 -3px 15px rgba(208, 107, 255, 0.3);
 }
+
+/* ==============================
+   📋 Styling Tabel Siswa
+============================== */
+table.siswa {
+  width: 90%;
+  margin: 30px auto 40px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 25px rgba(208, 107, 255, 0.15);
+  background: white;
+  text-align: left;
+}
+
+table.siswa thead tr {
+  background: linear-gradient(90deg, #d06bff, #ff8adf);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+table.siswa th, table.siswa td {
+  padding: 12px 18px;
+  border-bottom: 1px solid #e0c7f9;
+  font-weight: 500;
+  color: #4a2b5c;
+}
+
+table.siswa tbody tr:nth-child(odd) {
+  background: #fce4ff;
+}
+
+table.siswa tbody tr:nth-child(even) {
+  background: #fff0f5;
+}
+
+table.siswa tbody tr:hover {
+  background: #f7d6ff;
+  cursor: default;
+  transition: background 0.3s ease;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 600px) {
+  table.siswa {
+    width: 100%;
+    font-size: 14px;
+  }
+  table.siswa th, table.siswa td {
+    padding: 8px 12px;
+  }
+}
