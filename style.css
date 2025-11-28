@@ -94,6 +94,80 @@ h2 {
 }
 
 /* =============================
+   📅 Jadwal Kelas XI RPL
+============================= */
+.jadwal-container {
+  width: 90%;
+  margin: 30px auto;
+  background: #fff0f5;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(208, 107, 255, 0.25);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.jadwal-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff8adf, #d06bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+}
+
+.jadwal {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.jadwal th, .jadwal td {
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.jadwal th {
+  background: linear-gradient(90deg, #d06bff, #ff8adf);
+  color: white;
+  font-weight: 600;
+}
+
+.jadwal td {
+  font-weight: 500;
+  color: #5f3e7a;
+  background: #ffe6f9;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.jadwal tr:nth-child(even) td {
+  background: #fff0f5;
+}
+
+.jadwal tr:hover td {
+  background: #f7d6ff;
+  transform: scale(1.02);
+  box-shadow: 0 3px 15px rgba(208, 107, 255, 0.2);
+  transition: 0.3s;
+}
+
+/* Warna per hari (opsional) */
+.senin td { background: #ffe6f9; }
+.selasa td { background: #fce4ff; }
+.rabu td { background: #fdf0ff; }
+.kamis td { background: #ffe0f7; }
+.jumat td { background: #ffe8ff; }
+
+/* Animasi masuk */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================
    🌸 GALERI - FILTER BUTTON
 ============================= */
 .filter-buttons {
