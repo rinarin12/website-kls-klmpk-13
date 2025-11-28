@@ -151,15 +151,7 @@ h2 {
   background: #f7d6ff;
   transform: scale(1.02);
   box-shadow: 0 3px 15px rgba(208, 107, 255, 0.2);
-  transition: 0.3s;
 }
-
-/* Warna per hari (opsional) */
-.senin td { background: #ffe6f9; }
-.selasa td { background: #fce4ff; }
-.rabu td { background: #fdf0ff; }
-.kamis td { background: #ffe0f7; }
-.jumat td { background: #ffe8ff; }
 
 /* Animasi masuk */
 @keyframes fadeIn {
@@ -168,7 +160,7 @@ h2 {
 }
 
 /* =============================
-   🌸 GALERI - FILTER BUTTON
+   🌸 FILTER BUTTON GALERI
 ============================= */
 .filter-buttons {
   text-align: center;
@@ -216,7 +208,6 @@ h2 {
   cursor: pointer;
 }
 
-/* Animasi Hover Lembut */
 .hover-animate:hover {
   transform: scale(1.06);
   box-shadow: 0 10px 30px rgba(208, 107, 255, 0.4);
@@ -229,7 +220,6 @@ h2 {
   border-radius: 18px;
 }
 
-/* Caption Judul Foto */
 .caption {
   text-align: center;
   margin-top: 8px;
@@ -374,7 +364,7 @@ table.siswa tbody tr:hover {
   transition: background 0.3s ease;
 }
 
-/* Responsive untuk layar kecil */
+/* Responsive */
 @media (max-width: 600px) {
   table.siswa {
     width: 100%;
@@ -382,5 +372,64 @@ table.siswa tbody tr:hover {
   }
   table.siswa th, table.siswa td {
     padding: 8px 12px;
+  }
+}
+
+/* ==========================================
+   💗 PROFIL KELAS XI RPL (WARNA DISESUAIKAN)
+========================================== */
+.profil-container {
+  width: 85%;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(208, 107, 255, 0.15);
+}
+
+.profil-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d06bff, #ff8adf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.profil-text {
+  background: #fff0f7;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(208, 107, 255, 0.1);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a2b5c;
+}
+
+.profil-text b {
+  color: #b14cff;
+}
+
+.profil-text p {
+  margin: 8px 0;
+}
+
+/* Ikon Judul */
+.profil-icon {
+  color: #d06bff;
+  font-size: 30px;
+  margin-right: 8px;
+}
+
+/* Responsive Profil */
+@media (max-width: 600px) {
+  .profil-container {
+    width: 95%;
+    padding: 20px;
+  }
+  .profil-text {
+    font-size: 14px;
+    padding: 15px;
   }
 }
